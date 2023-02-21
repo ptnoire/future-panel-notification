@@ -1,0 +1,151 @@
+
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: black;
+}
+
+h1 {
+    font-size: 22px;
+    color: #c2ffff;
+}
+
+p {
+    font-size: 16px;
+    color: #c2ffff;
+}
+
+.btn {
+    border: 2px solid #00a2ff;
+    background: #66ccff64;
+    font-family: monospace;
+    color: #eafafa;
+    margin-left: 40%;
+    transition: .3s;
+}
+
+.btn:hover {
+    transition: all .5s;
+    background: #66ccffca;
+    color: #ffffff;
+    box-shadow: 0 0 2.5px #66ccff79, 0 0 5px #66ccff6c, 0 0 6px #66ccff49, 0 0 7px #66ccff7a, 0 0 10px #66ccff6b, 0 0 15px #66ccff59;
+}
+
+  .console {
+    margin-top: 10%;
+    margin-left: 25%;
+    padding: 10px;
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    background: #66ccff38;
+    border: 2px solid #007aff;
+    position: absolute;
+    transition: transform 0.2s ease-out;
+    z-index: 2;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(-15deg) rotateY(-30deg);
+    box-shadow: 0 0 5px #66ccff79, 0 0 10px #66ccff6c, 0 0 15px #66ccff49, 0 0 20px #66ccff7a, 0 0 25px #66ccff6b, 0 0 30px #66ccff59;
+  }
+
+  .console::before,
+  .console::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border: inherit;
+    border-radius: inherit;
+    transform-style: preserve-3d;
+    box-shadow: inherit;
+  }
+
+  .console::before {
+    animation: flicker 1s forwards;
+    transform: translateZ(-100px);
+  }
+
+  .console::after {
+    animation: flicker .5s forwards;
+    transform: translateZ(-50px);
+  }
+
+  .flicker1,
+  .flicker2 {
+    text-shadow: 0 0 10px #66CCFF, 0 0 20px #66CCFF, 0 0 30px #66CCFF, 0 0 40px #66CCFF, 0 0 50px #66CCFF, 0 0 60px #66CCFF;
+  }
+
+  .flicker1 {
+    animation: flicker .4s forwards;
+  }
+
+  .flicker2 {
+    text-align: justify;
+    animation: flicker .6s forwards;
+  }
+
+  .warning {
+    color: #ff9a9a;
+    text-shadow: 0 0 10px #ff6666, 0 0 20px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 60px #ff6666;
+  }
+
+  .cWarning {
+    margin-top: 10%;
+    margin-left: 25%;
+    padding: 10px;
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    background: #ff666638;
+    border: 2px solid #ff0000;
+    position: absolute;
+    transition: transform 0.2s ease-out;
+    z-index: 2;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(-15deg) rotateY(-30deg);
+    box-shadow: 0 0 5px #ff666679, 0 0 10px #ff66666c, 0 0 15px #ff666649, 0 0 20px #ff66667a, 0 0 25px #ff66666b, 0 0 30px #ff666659;
+  }
+
+  @keyframes flicker {
+    0% {
+      opacity: 0.1;
+    }
+    5% {
+      opacity: 0.2;
+    }
+    10% {
+      opacity: 0.1;
+    }
+    15% {
+      opacity: 0.3;
+    }
+    20% {
+      opacity: 0.1;
+    }
+    25% {
+      opacity: 0.4;
+    }
+    30% {
+      opacity: 0.1;
+    }
+    35% {
+      opacity: 0.5;
+    }
+    40% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
